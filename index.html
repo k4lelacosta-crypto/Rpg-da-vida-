@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caderno do Tempo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <button onclick="showTab('jornada')">🌙 Além da Jornada</button>
+        <button onclick="showTab('memorias')">📔 Memórias Reais</button>
+        <button onclick="activateDisappear()">🌫️</button>
+    </nav>
+
+    <main>
+        <section id="jornada" class="tab active">
+            <h1>Além da Jornada</h1>
+            <textarea id="jornadaInput" placeholder="Hoje eu continuei..."></textarea>
+            <button onclick="saveJornada()">Guardar Memória</button>
+            <ul id="jornadaList"></ul>
+        </section>
+
+        <section id="memorias" class="tab">
+            <h1>Memórias Reais</h1>
+            <textarea id="memoriaInput" placeholder="Escreva livremente..."></textarea>
+            <button onclick="saveMemoria()">Guardar Memória</button>
+            <ul id="memoriaList"></ul>
+        </section>
+    </main>
+
+    <div id="blackout" onclick="deactivateDisappear()"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
